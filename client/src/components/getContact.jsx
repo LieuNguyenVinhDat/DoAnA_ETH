@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import {} from "./GetDetail.css";
+import {} from "../css/GetContact.css";
 // Be sure to include styles at some point, probably during your bootstraping
-class Detail extends Component {
+class Contact extends Component {
   render() {
     return(
       <div class="container">  
@@ -34,4 +34,4 @@ class Detail extends Component {
 );
   }
 }
-export default Detail;
+export default Contact;

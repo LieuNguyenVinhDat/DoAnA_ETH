@@ -1,19 +1,13 @@
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
-import AppSidebar from "./components/sidebar";
-import AddCert from "./components/addCert";
-import GetAllCertificates from "./components/getAllCert";
-import GetDetailsWithDocID from "./components/getDetails.jsx";
-import Sidebar from './components/sidebar'
+// import Contact from '../src/components/getContact'
+import Sidebar from '../src/components/sidebar'
 function App() {
   return (
 
-  //  <AppSidebar>
-     
-  //  </AppSidebar>
+    <Sidebar></Sidebar>
  
-    <Sidebar/>
 
   );
 }

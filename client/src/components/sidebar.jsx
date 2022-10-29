@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
-import {} from "./SideBar.css";
+import {} from "../css/sidebar.css";
 
 // Be sure to include styles at some point, probably during your bootstraping
 // import "@trendmicro/react-sidenav/dist/react-sidenav.css";
@@ -32,7 +33,9 @@ class Sidebar extends Component {
         </div>
         <div id="center" class="main center">
           <div class="mainInner">
-            <div></div>
+            <div>
+           
+            </div>
           </div>
         </div>
       </body>
