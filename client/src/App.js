@@ -5,7 +5,7 @@ import AppSidebar from "./components/sidebar";
 import AddCert from "./components/addCert";
 import GetAllCertificates from "./components/getAllCert";
 import GetDetailsWithDocID from "./components/getDetails.jsx";
-
+import Sidebar from './components/sidebar'
 function App() {
   return (
 
@@ -13,7 +13,7 @@ function App() {
      
   //  </AppSidebar>
  
-    <GetAllCertificates/>
+    <Sidebar/>
 
   );
 }
