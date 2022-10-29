@@ -1,51 +1,37 @@
-//client get details
-import React, { Component } from 'react';
-import { doc, getDoc, collection } from 'firebase/firestore';
-import { db } from "../firebase-config";
+import React, { Component } from "react";
 
-export default class GetDetailsWithDocID extends Component {
-    
-        constructor(props) {
-            super(props);
-            this.state = {
-                certificate: {},
-                stu_id: "",
-            };
-        }
-    
-        componentDidMount() {
-            this.getCertificate();
-        }
-    
-        certificatesCollection = collection(db, "cerfiticates");
-
-        getCertificate = async () => {
-            const docRef = doc(this.certificatesCollection, this.state.stu_id);
-            const docSnap = await getDoc(docRef);
-            if (docSnap.exists()) {
-                this.setState({ certificate: docSnap.data() });
-            } else {
-                console.log("No such document!");
-            }
-        };
-    render() {
-        return (
-            <div>
-                <h1>Get Certificate Details</h1>
-                <input type="text" placeholder="Enter Student ID" onChange={(e) => this.setState({ stu_id: e.target.value })} />
-                <button onClick={this.getCertificate}>Get Certificate</button>
-                <p>{this.state.certificate.name}</p>
-                <p>{this.state.certificate.stu_id}</p>
-                <p>{this.state.certificate.email}</p>
-                <p>{this.state.certificate.course}</p>
-                <p>{this.state.certificate.date}</p>
-                <p>{this.state.certificate.college}</p>
-                <p>{this.state.certificate.term}</p>
-                <p>{this.state.certificate.transactionETH}</p>
-
-            </div>
-        )
-    }
-
-
+import {} from "./GetDetail.css";
+// Be sure to include styles at some point, probably during your bootstraping
+class Detail extends Component {
+  render() {
+    return(
+      <div class="container">  
+      <form id="contact" action="" method="post">
+        <h3>Quick Contact</h3>
+        <h4>Contact us today, and get reply with in 24 hours!</h4>
+        <fieldset>
+          <input placeholder="Your name" type="text" tabindex="1" required autofocus/>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Email Address" type="email" tabindex="2" required/>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Phone Number" type="tel" tabindex="3" required/>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required/>
+        </fieldset>
+        <fieldset>
+          <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+      </form>
+     
+      
+    </div>
+);
+  }
 }
+export default Detail;
