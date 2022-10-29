@@ -1,7 +1,7 @@
 //form add certificate
-import React, { Component, useEffect, useState, setState } from "react";
+import React, {  useEffect, useState } from "react";
 import { db } from "../firebase-config";
-import { collection, addDoc, setDoc, doc, getDoc } from "firebase/firestore";
+import { collection, setDoc, doc } from "firebase/firestore";
 import abi from "../utils/Certificates.json";
 import { ethers } from "ethers";
 
