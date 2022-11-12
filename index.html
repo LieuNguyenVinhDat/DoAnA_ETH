@@ -37,6 +37,234 @@
             <div>PURE CSS SIDEBAR TOGGLE MENU</div>
         </div>
     </div>
+        
+    <p>
+        // class AddCert extends Component {
+
+            //     //  [currentAccount, setCurrentAccount] = useState("");
+            
+            //     //  [allCertificates, setAllCertificates] = useState([]);
+            //     //  contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+            //     //  contractABI = abi.abi;
+                
+            //     // getAllCertificates = async () => {
+            //     //     const {ethereum} = window;
+            //     //     try{
+            //     //         if(ethereum){
+            //     //             const provider = new ethers.providers.Web3Provider(ethereum);
+            //     //             const signer = provider.getSigner();
+            //     //             const contract = new ethers.Contract(this.contractAddress, this.contractABI, signer);
+            //     //             const allCertificates = await contract.getAllCertificates();
+            //     //             const allCertificatesParsed = allCertificates.map((certificate) => {
+            //     //                 return {
+            //     //                     id: certificate.id,
+            //     //                     name: certificate.name,
+            //     //                     description: certificate.description,
+            //     //                     date: certificate.date,
+            //     //                     address: certificate.address
+            //     //                 }
+            //     //             })
+            //     //             setAllCertificates(allCertificatesParsed);
+            //     //         } else {
+            //     //             console.log("Ethereum object not found");
+            
+            //     //         }
+            //     //     }catch(error){
+            //     //         console.log(error);
+            //     //     }   
+            //     // }
+            
+            //     // checkWalletIsConnected = async () => {
+            //     //     try {
+            //     //         const { ethereum } = window;
+            //     //         if (!ethereum) {
+            //     //             console.log("Make sure you have metamask!");
+            //     //             return;
+            //     //         } else {
+            //     //             console.log("We have the ethereum object", ethereum);
+            //     //         }
+            
+            //     //         const accounts = await ethereum.request({ method: 'eth_accounts' });
+            
+            //     //         if (accounts.length !== 0) {
+            //     //             const account = accounts[0];
+            //     //             console.log("Found an authorized account:", account);
+            //     //             setCurrentAccount(account);
+            //     //         }
+            //     //         else {
+            //     //             console.log("No authorized account found")
+            //     //         }
+            
+            //     //     } catch (error) {
+            //     //         console.log(error);
+            //     //     }
+            //     // }
+            
+            //     // connectWallet = async () => {
+            //     //     try {
+            //     //         const { ethereum } = window;
+            //     //         if (!ethereum) {
+            //     //             alert("Get metamask!");
+            //     //             return;
+            //     //         }
+            
+            //     //         const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            
+            //     //         console.log("Connected", accounts[0]);
+            //     //         setCurrentAccount(accounts[0]);
+            //     //     } catch (error) {
+            //     //         console.log(error);
+            //     //     }
+            //     // }
+            
+            //     // addCertToETH = async () => {
+            //     //     const {ethereum} = window;
+            //     //     try{
+            //     //         if(ethereum){
+            //     //             const provider = new ethers.providers.Web3Provider(ethereum);
+            //     //             const signer = provider.getSigner();
+            //     //             const contract = new ethers.Contract(this.contractAddress, this.contractABI, signer);
+            //     //             const transaction = await contract.addCertificate(this.state.name, this.state.stu_id, this.state.email, this.state.course, this.state.date, this.state.college, this.state.term);
+            //     //             await transaction.wait();
+            //     //             console.log(`${transaction.hash}`);
+            //     //             this.setState({transactionETH: transaction.hash});
+            //     //         } else {
+            //     //             console.log("Ethereum object not found");
+            
+            //     //         }
+            //     //     }catch(error){
+            //     //         console.log(error);
+            //     //     }
+            //     // }
+            
+            
+            
+            //     constructor(props) {
+            //         super(props);
+            //         this.state = {
+            //         name: "",
+            //         stu_id: "",
+            //         email: "",
+            //         course: "",
+            //         date: "",
+            //         college: "", 
+            //         term: "",
+            //         transactionETH: "",
+            //         };
+            //     }
+            
+            //     handleChange = (e) => {
+            //         this.setState({
+            //         [e.target.name]: e.target.value,
+            //         });
+            //     };
+                
+            //     certificatesCollection = collection(db, "cerfiticates");
+            
+            //     addCertToFirebase = async (e) => {
+            //         //setDoc = dateTime.Now()
+            //         e.preventDefault();
+            //         const newCert = {
+            //         name: this.state.name,
+            //         stu_id: this.state.stu_id,
+            //         email: this.state.email,
+            //         course: this.state.course,
+            //         date: this.state.date,
+            //         college: this.state.college,
+            //         term: this.state.term,
+            //         transactionETH: this.state.stu_id, //this.state.transactionETH
+            //         };
+            //         await setDoc(doc(this.certificatesCollection, this.state.stu_id), newCert);
+            //         this.setState({
+            //         name: "",
+            //         stu_id: "",
+            //         email: "",
+            //         course: "",
+            //         date: "",
+            //         college: "",
+            //         term: "",
+            //         transactionETH: "0x0000000000000000000000000000000000000000",
+            //         });
+            //     };
+            //         // const certificatesCollection = collection(db, "cerfiticates");
+            //         // e.preventDefault();
+            //         // const { name, stu_id, email, course, date, college, term } = this.state;
+            //         // const docRef = await addDoc(this.certificatesCollection, {
+            //         // name: name,
+            //         // stu_id: stu_id,
+            //         // email: email,
+            //         // course: course,
+            //         // date: date,
+            //         // college: college,
+            //         // term: term,
+            //         // transactionETH: "0x0000000000000000000000000000000000000000",
+            //         // });
+            //         // console.log("Document written with ID: ", docRef.id);
+            
+            
+            //     render() {
+            //         return (
+            //             <div>
+            //                 <form onSubmit={this.addCertToFirebase}>
+            //                     <input
+            //                         type="text"
+            //                         name="name"
+            //                         placeholder="Name"
+            //                         value={this.state.name}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input
+            //                         type="text"
+            //                         name="stu_id"
+            //                         placeholder="Student ID"
+            //                         value={this.state.stu_id}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input
+            //                         type="text"
+            //                         name="email"
+            //                         placeholder="Email"
+            //                         value={this.state.email}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input
+            //                         type="text"
+            //                         name="course"
+            //                         placeholder="Course"
+            //                         value={this.state.course}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input
+            //                         type="text"
+            //                         name="date"
+            //                         placeholder="Date"
+            //                         value={this.state.date}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input
+            //                         type="text"
+            //                         name="college"
+            //                         placeholder="College"
+            //                         value={this.state.college}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input
+            //                         type="text"
+            //                         name="term"
+            //                         placeholder="Term"
+            //                         value={this.state.term}
+            //                         onChange={this.handleChange}
+            //                     />
+            //                     <input type="submit" value="Add Certificate" />
+            //                 </form>
+            //             </div>
+            //         );
+            
+            //     }
+               
+            // }
+            // export default AddCert;
+    </p>
 </body>
 
 </html>

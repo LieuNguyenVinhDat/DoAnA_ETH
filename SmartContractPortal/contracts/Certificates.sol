@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
+// Certificates address:  0xD185f1427B67D185859e10D5B6A2E7B976a25733
 
 contract cert {
     address owner;
@@ -66,11 +67,11 @@ contract cert {
         string term
     );
 
-    function getDetailCertWithId(uint256 _id)
-        public
-        view
-        returns (Certificate memory)
-    {
-        return certs[_id - 1];
-    }
+    // function getDetailCertWithId(uint256 _id)
+    //     public
+    //     view
+    //     returns (Certificate memory)
+    // {
+    //     return certs[_id - 1];
+    // }
 }

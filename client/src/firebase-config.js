@@ -1,10 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// require("dotenv").config();
-
 const firebaseConfig = {
-  apiKey: "AIzaSyDl52FDehluN_pDvBqXHIaXm972qDeP04M",
+  apiKey: process.env.PRIVATE_KEY,
   authDomain: "project-certificate-eth.firebaseapp.com",
   projectId: "project-certificate-eth",
   storageBucket: "project-certificate-eth.appspot.com",

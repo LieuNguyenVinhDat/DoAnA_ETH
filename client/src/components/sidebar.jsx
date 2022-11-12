@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
 import {} from "../css/sidebar.css";
-
+// import logo from "../img/logo.png";
+// import logoIcon from "../img/logo_icon.png";
 // Be sure to include styles at some point, probably during your bootstraping
 // import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 class Sidebar extends Component {
+  
   render() {
     return (
         <view>
@@ -22,7 +24,7 @@ class Sidebar extends Component {
         <div id="sidebarMenu">
           <ul class="sidebarMenuInner">
             <li>
-              Jelena Jovanovic <span>Web Developer</span>
+              {/* <img src={logoIcon} alt="logo" width="100" height="50"/> */}
             </li>
             <li><a href="https://vanila.io" target="_blank" rel="noreferrer">Company</a></li>
       <li><a href="https://instagram.com/plavookac" target="_blank" rel="noreferrer">Instagram</a></li>
@@ -34,7 +36,6 @@ class Sidebar extends Component {
         <div id="center" class="main center">
           <div class="mainInner">
             <div>
-           
             </div>
           </div>
         </div>
